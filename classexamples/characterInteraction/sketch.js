@@ -49,6 +49,10 @@ function draw() {
     console.log("right hand side");
       background("green");
   }
+  if(mouseX == width/2){
+    console.log("center");
+    background("yellow");
+  }
 
   pointX = mouseX;
   pointY = mouseY;
