@@ -2,8 +2,7 @@
 // Puppy image "puppies" by www.petian.net is licensed under CC BY-NC-ND 2.0  https://search.creativecommons.org/photos/4f271583-e45d-4faf-bfc8-7291c7c1e3c3
 // dinosaur "Rupenhorn Dinosaur #4" by Kristian_Laban is licensed under CC BY-NC 2.0 https://search.creativecommons.org/photos/96213ba5-e9b6-4f2f-91e4-da28b9fcad22
 
-
-var imageArray = [];
+var sloth, puppy, dinosaur, panda, clownfish;
 
 var sButton, pButton, dButton, bButton, cButton;
 
@@ -12,11 +11,11 @@ var currentImage = 0;
 var curImage;
 
 function preload(){
-  imageArray[0] = loadImage("images/sloth.jpg");
-  imageArray[1] = loadImage("images/puppy.jpg");
-  imageArray[2] = loadImage("images/dinosaur.jpg");
-  imageArray[3] = loadImage("images/panda.jpg");
-  imageArray[4] = loadImage("images/clownfish.jpg");
+  sloth = loadImage("images/sloth.jpg");
+  puppy = loadImage("images/puppy.jpg");
+  dinosaur = loadImage("images/dinosaur.jpg");
+  panda = loadImage("images/panda.jpg");
+  clownfish = loadImage("images/clownfish.jpg");
 }
 
 
@@ -56,18 +55,27 @@ function setup() {
     currentImage = 4;
   });
 
-
+  curImage = sloth;
 }
 
 function draw() {
   background("white");
-  image(imageArray[currentImage],0,0,imageArray[currentImage].width/4,imageArray[currentImage].height/4);
 
+  console.log("currentImage" + currentImage);
+  image(curImage,0,0,curImage.width/4,curImage.height/4);
+  // put drawing code here
 
+  if(currentImage == 0){
+    curImage = sloth;
+  }else if(currentImage == 1){
+    curImage = puppy;
+  }else if(currentImage == 2){
+    curImage = dinosaur;
+  }else if(currentImage == 3){
+  curImage = panda;
+  }else if(currentImage == 4){
+  curImage = clownfish;
+  }
 
-
-
-
-
-
+  //image(curImage,0,0,curImage.width/4,curImage.height/4);
 }
