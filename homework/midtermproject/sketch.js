@@ -33,7 +33,7 @@ function preload(){
 
 function setup() {
   // put setup code here
-  createCanvas(1350,1000);
+createCanvas(1350,1000);
 
   buttons[0] = createButton ("1");
   buttons[0].size(100);
@@ -96,6 +96,19 @@ function setup() {
 
 }
 
+function dinosaur(){
+  textSize(40);
+  fill("white");
+  stroke("black");
+  strokeWeight(3);
+  textFont('Georgia');
+  textStyle(BOLDITALIC);
+  text(questions[currentQuestion], 20,235);
+  text(options[currentQuestion], 20,270);
+  text(title, 20, 100);
+  text(instruction, 20, 150);
+}
+
 function draw() {
   image(fallImage,0,0);
   // put drawing code here
@@ -131,16 +144,7 @@ function draw() {
 
   }
 
-  textSize(40);
-  fill("white");
-  stroke("black");
-  strokeWeight(3);
-  textFont('Georgia');
-  textStyle(BOLDITALIC);
-  text(questions[currentQuestion], 20,235);
-  text(options[currentQuestion], 20,270);
-  text(title, 20, 100);
-  text(instruction, 20, 150);
+dinosaur();
 
 
 
