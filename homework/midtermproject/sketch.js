@@ -33,7 +33,20 @@ function preload(){
 
 function setup() {
   // put setup code here
-createCanvas(1350,1000);
+  var cnv = createCanvas(1350,1000);
+  cnv.id("mycanvas");
+
+  var container0 = createDiv();
+  container0.id("container0");
+  //to search for an id, you use the # token in front of the name
+  //.html() function allows you to inject html or text into another html tag
+
+  //.style("css property", "value")
+  select("#container0").style("width","1350px");
+  select("#container0").style("margin","0 auto");//center your container, margin: 0 auto,0 refers to top and bottom spacing, the auto refers to left and right spacing, and this will only work if you set a width
+
+  cnv.parent("#container0");
+
 
   buttons[0] = createButton ("1");
   buttons[0].size(100);

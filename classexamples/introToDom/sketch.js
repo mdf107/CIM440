@@ -1,6 +1,6 @@
 function setup() {
   // put setup code here
-  var cnv = createCanvas(400,400);
+  var cnv = createCanvas(1350,1000);
   cnv.id("mycanvas");
 
   var container0 = createDiv();
